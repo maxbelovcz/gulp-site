@@ -1,0 +1,16 @@
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 150;
+    background: $--body-bg-color;
+}
+.header-wrapper{
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: space-between;
+    gap: 35px;
+    width: 100%;
+}

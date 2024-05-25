@@ -1,0 +1,92 @@
+.services {
+    position: relative;
+    max-width: 100%;
+}
+.services__wrapper {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: flex-start;
+    width: 100%;
+    padding: 40px 0px;
+}
+.services__body {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    width: 100%;
+    gap: 45px;
+    flex: 1;
+}
+.services__item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    max-width: 410px;
+    width: 100%;
+    height: auto;
+    padding: 30px 40px 20px 40px;
+    align-items: stretch;
+    border-radius: 25px;
+    background: $--DARK;
+    box-shadow: 0px 4px 10px 0px rgba(164, 204, 239, 0.20), 0px 8px 10px 0px rgba(37, 48, 82, 0.05);
+    transition: all 0.3s ease-out;
+}
+.services__item-body{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+}
+.service-item__number {
+    color: $--GREY3;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+.service-item__title {
+    color: $--GREY2;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 130%;
+    text-transform: uppercase;
+    min-height: 62px;
+    margin-bottom: 25px;
+    transition: all .3s ease-out;
+}
+.service-item__description {
+    color: $--GREY1;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 180%;
+    margin-bottom: 20px;
+    transition: all .3s ease-out;
+}
+.services__item:hover{
+    box-shadow: none;
+}
+.services__item:hover .service-item__title{
+    color: $--RED;
+}
+.services__item:hover .service-item__description{
+    color: $--GREY4;
+}
+@media (max-width: 991.98px){
+    .services__wrapper{
+        align-items: center;
+    }
+    .services__body{
+        justify-content: center;
+    }
+    .services__item{
+        max-width: 100%;
+    }
+    .service-item__title{
+        min-height: auto;
+    }
+}

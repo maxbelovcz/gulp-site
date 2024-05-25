@@ -1,0 +1,113 @@
+.main-menu {
+    display: flex;
+    position: relative;
+    align-items: center;
+    gap: 30px;
+    max-width: 800px;
+    width: 100%;
+    justify-content: flex-start;
+    gap: 40px;
+}
+.menu-item {
+    position: relative;
+    & a {
+        position: relative;
+        padding: 10px 0;
+        color: $--Wht;
+        font-size: 18px;
+        font-style: normal;
+        line-height: normal;
+        font-weight: 500;
+        text-decoration: none;
+        text-transform: uppercase;
+        transition: all .3s ease-out;
+    }
+    @media (min-width: 992px){
+        & a:hover{
+            color: $--RED;
+        }
+    }
+}
+.menu-item a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0px;
+    width: 0;
+    height: 2px;
+    background-color: $--RED;
+    transition: width 0.3s ease-out;
+}
+.menu-item a:hover::after {
+    width: 100%;
+}
+
+@media (max-width: 991.98px){
+    .main-menu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 40px;
+        margin-top: 0;
+        position: fixed;
+        top: -120%;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        max-width: 100%;
+        width: 100%;
+        height: 0%;
+        background-color: $--GREY4;
+        margin: auto;
+        visibility: hidden;
+        opacity: 0;
+        z-index: 100;
+        overflow-y: auto;
+    }
+
+    .main-menu.active {
+        top: 0%;
+        height: 100%;
+        opacity: 1;
+        visibility: visible;
+        animation: slideMenu 0.5s linear;
+    }
+    
+    @keyframes slideMenu {
+        0% {
+            height: 0%;
+            top: -120%;
+            opacity: 0;
+        }
+        100% {
+            height: 100%;
+            top: 0%;
+            opacity: 1;
+        }
+    }
+    .main-menu::before {
+        display: none;
+        content: '';
+        top: 0;
+        left: 0;
+        position: fixed;
+        z-index: 50;
+        width: 100%;
+        height: 100px;
+        background-color: $--GREY4;
+    }
+    .main-menu.active::before {
+        display: block;
+    }
+    .menu-item:first-child {
+        margin-top: 200px;
+    }
+    .menu-item a::after {
+        display: none;
+    }
+    .menu-item a {
+        color: $--DARK;
+        font-size: 24px;
+    }
+}

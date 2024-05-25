@@ -1,0 +1,68 @@
+.call-back-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 500px;
+    width: 100%;
+    gap: 25px;
+    padding: 20px 0px 40px 0px;
+}
+.call-back-form__title{
+    color: $--GREY4;
+    font-size: 26px;
+    font-style: normal;
+    line-height: normal;
+    font-weight: 600;
+}
+.call-back-form__name,
+.call-back-form__phone,
+.call-back-form__mail,
+.call-back-form__message {
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    padding: 10px 15px;
+    width: 100%;
+    color: $--DARK;
+    background: $--GREY4;
+    font-family: "Lato";
+    font-weight: 400;
+    font-size: 16px;
+    font-style: normal;
+    line-height: normal;
+    transition: all .3s ease-out;
+    &::placeholder{
+        color: $--GREY1;
+        font-family: "Lato";
+        font-weight: 400;
+        font-size: 16px;
+        font-style: normal;
+        line-height: normal;
+        transition: all .3s ease-out;
+    }
+    &:focus::placeholder{
+        color: transparent;
+        transition: all .3s ease-out;
+    }
+}
+.call-back-form__message{
+    min-height: 40px;
+    resize: none;
+}
+.main-button--custom{
+    border: none;
+    cursor: pointer;
+    max-width: 150px;
+    width: 100%;
+}
+
+@media (max-width: 991.98px){
+    .call-back-form{
+        align-items: center;
+        padding: 0px;
+        margin-bottom: 45px;
+    }
+    .call-back-form__title{
+        text-align: center;
+    }
+}

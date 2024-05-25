@@ -1,0 +1,86 @@
+.contacts{
+    display: flex;
+    flex-direction: column;
+    max-width: 570px;
+    width: 100%;
+    align-items: flex-start;
+    gap: 15px;
+    padding: 20px 0px 40px 0px;
+}
+.contacts__title{
+    color: $--RED;
+    font-size: 24px;
+    font-style: normal;
+    line-height: normal;
+    font-weight: 600;
+}
+.contacts__body{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: flex-start;
+}
+.contacts__address {
+    color: $--Wht;
+    font-size: 18px;
+    font-style: normal;
+    line-height: normal;
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+.contacts__phone,
+.contacts__mail {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 10px 0px;
+    color: $--Wht;
+    font-size: 18px;
+    font-style: normal;
+    line-height: normal;
+    font-weight: 400;
+    text-decoration: none;
+    transition: all .3s ease-in;
+    & svg {
+        width: 20px;
+        height: 20px;
+        margin-right: 15px;
+    }
+    & svg path{
+        fill: $--Wht;
+        transition: all .3s ease-in;
+    }
+}
+
+.contacts__phone:hover,
+.contacts__mail:hover{
+    color: $--RED;
+    & svg path{
+        fill: $--RED;
+    }
+}
+.contacts__phone::after,
+.contacts__mail::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0px;
+    width: 0;
+    height: 2px;
+    background-color: $--RED;
+    transition: width 0.3s ease-in;
+}
+.contacts__phone:hover::after,
+.contacts__mail:hover::after{
+    width: 100%;
+}
+
+@media (max-width: 991.98px){
+    .contacts{
+        padding: 0px;
+        align-items: center;
+    }
+    .contacts__body{
+        align-items: center;
+    }
+}

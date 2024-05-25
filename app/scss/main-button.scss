@@ -1,0 +1,59 @@
+.intro .main-button{
+    margin-top: 6vh;
+}
+.main-button {
+    display: flex;
+    padding: 10px 16px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    background: $--GREY4;
+    color: $--DARK;
+    text-align: center;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: all .3s ease-out;
+    & svg {
+        width: 18px;
+        height: 19px;
+        margin-left: 8px;
+        transition: all .3s ease-out;
+    }
+    & svg path {
+        fill: $--DARK;
+        transition: all .3s ease-out;
+    }
+}
+.main-button:hover {
+    color: $--Wht;
+    background: $--RED;
+    & svg{
+        margin-left: 16px;
+        transform: rotate(45deg);
+    }
+    & svg path {
+        fill: $--Wht;
+    }
+}
+@media (max-width: 991.98px){
+    .intro .main-button{
+        padding: 15px 12px;
+        font-size: 16px;
+        width: 50%;
+        line-height: 150%;
+    }
+}
+@media (max-width: 767.98px){
+    .intro .main-button{
+        width: 60%;
+    }
+}
+@media (max-width: 575.98px){
+    .intro .main-button{
+        width: 100%;
+    }
+}
