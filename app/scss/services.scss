@@ -22,8 +22,7 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    max-width: 410px;
-    width: 100%;
+    width: 48%;
     height: auto;
     padding: 30px 40px 20px 40px;
     align-items: stretch;
@@ -48,7 +47,7 @@
     margin-bottom: 20px;
 }
 .service-item__title {
-    color: $--GREY2;
+    color: $--GREY1;
     font-size: 24px;
     font-style: normal;
     font-weight: 500;

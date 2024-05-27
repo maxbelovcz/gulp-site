@@ -1,5 +1,6 @@
 AOS.init({
-    duration: 1200,
+    once: true,
+    duration: 1200
 });
 
 const header = document.querySelector('header');
